@@ -1,0 +1,7 @@
+﻿
+function globalInit() {
+
+    //  alert('init.');
+
+
+}

@@ -1,0 +1,20 @@
+﻿[{
+    "Id":1,
+    "Items":
+    [
+        {
+            "Id":540346,
+            "Type":"Book",
+            "Name":"Hitch 22",
+            "Description":"Christopher Hitchens autobiography",
+            "Notes":[]
+        },
+        {
+            "Id":249771,
+            "Type":"Book",
+            "Name":"ASP.NET MVC 4 and the Web API",
+            "Description":"Building a REST service from Start to Finish",
+            "Notes":[]
+        }
+    ]
+}]

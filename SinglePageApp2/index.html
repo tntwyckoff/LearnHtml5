@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>iNotate</title>
+
+    <script type="text/javascript" src="Scripts/angular.min.js"></script>
+    <script type="text/javascript" src="Scripts/angular-loader.min.js"></script>
+    <script type="text/javascript" src="Resources/np-app/app.js"></script>
+
+</head>
+    <body ng-app="iNotate">
+        <div ng-controller="DataStoreController as data">
+            <h1 id="title">iNotate Library</h1>
+
+            <div ng-show="!(data === null)">
+                There is data:
+                <div ng-repeat="title in data.library.Items">
+                   <div>
+                        Id: {{title.Id}}, Title: {{title.Name}}
+                    </div>
+                </div>
+                <div ng-show="data.loadError">
+                    There was an error loading the data. The web service 
+                    <span ng-show="data.serviceResponded">responded OK.</span>
+                    <span ng-hide="data.serviceResponded">failed to respond.</span>
+                </div>
+                <div ng-show="data.serviceResponded && !data.loadError && data.libraryLoaded">
+                    Data loaded successfully.
+                </div>
+            </div>
+
+            <div ng-show="data === null">
+                <div>
+                    There is no data.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
